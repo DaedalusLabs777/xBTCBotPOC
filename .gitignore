@@ -1,0 +1,10 @@
+client/node_modules
+api/__pycache__
+api/Data
+client/package-lock.json
+.DS_Store
+*.sqlite3
+client/public/bundle.js
+ethan.txt
+api/flask_env/*
+api/test_scripts/*

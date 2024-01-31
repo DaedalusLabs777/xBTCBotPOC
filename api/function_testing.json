@@ -1,0 +1,39 @@
+{
+    "name": "generic_inscriber",
+    "description": "creates an inscription command to write one or more inscriptions to a specific bitcoin taproot address using the ordinals protocol",
+    "parameters": {
+      "type": "object",
+      "properties": {
+      "content": {
+        "type": "string",
+        "description": "any type of text that can describe a protocol action, a name like DNS, or generic type of text. This is the content that is written as an inscription"
+      },
+      "file-type": {
+        "type": "string",
+        "description": "the file type the content will be written as. It can be .txt, CBOR, .json, .html or other file types"
+      },
+      "fee-rate": {
+        "type": "string",
+        "description": "the amount of fees the inscription transaction will be sent as. It is a number",
+        "pattern": "^[0-9]+$"
+      },
+      "number-of-inscribes": {
+        "type": "string",
+        "description": "the number of times the user wants to inscribe this content in file form sent to the address",
+        "pattern": "^[0-9]+$"
+      },
+      "to-address": {
+        "type": "string",
+        "description": "the recipient address the user is sending to",
+        "pattern": "^[a-zA-Z0-9]*$"
+      },
+        "rbf": {
+          "type": "boolean",
+          "description": "if the user is requesting to speed up a transaction then return yes otherwise return no"
+        }
+      },
+      "required": [
+        "rbf"
+      ]
+    }
+  }
